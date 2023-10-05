@@ -4,8 +4,6 @@
 Projeto feito para teste das capacidades básicas da engine de Unity, um esqueleto de um jogo de direção simples.
 
 ## Capturas de Tela
-Inclua algumas capturas de tela do jogo para dar aos usuários uma ideia visual do que esperar.
-
 ![Captura de Tela 1](screenshot1.png)
 ![Captura de Tela 2](screenshot2.png)
 
