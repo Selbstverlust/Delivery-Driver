@@ -6,13 +6,17 @@ public class Driver : MonoBehaviour {
 
     [SerializeField] float steerSpeed = 150f;
     [SerializeField] float moveSpeed = 10f;
-
-    // Start is called before the first frame update
-    void Start() {
-        
+    [SerializeField] float slowSpeed = 70f;
+    [SerializeField] float boostSpeed = 250f;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.tag == "Boost") {
+            Debug.Log("Speed boost picked up");
+            moveSpeed = boostSpeed;
+        }
     }
-
-    // Update is called once per frame
+    void OnCollisionEnter2D(Collision2D other) {
+        moveSpeed = slowSpeed;
+    }
     void Update() {
         float steerAmount = Input.GetAxis("Horizontal") * steerSpeed * Time.deltaTime;
         float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
